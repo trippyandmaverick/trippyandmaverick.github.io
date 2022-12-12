@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trippy and Maverick</title>
+  <style>
+    body {
+      background-image: url('1-beach.png');
+      background-size: cover;
+      font-family: 'Great Vibes', sans-serif;
+      color: black;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    p {
+      font-size: 1.5em;
+      padding: 0.5em;
+    }
+  </style>
+
+  <!-- Import the "Great Vibes" font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Trippy and Maverick</h1>
+  <p>
+    Trippy and Maverick, two horses so in love <br>
+They trotted and galloped under skies above <br>
+Together they went on adventures each day <br>
+Their bond grew stronger in every way
+  </p>
+  <p>
+    They took a holiday to the beach one day <br>
+The warm sun on their backs, the breeze in their manes <br>
+They galloped along the shore, so full of glee <br>
+Exploring all that the beach had to see 
+  </p>
+  <p>
+    In the water they played, in the sand they rolled <br>
+So happy and carefree, their hearts full and bold <br>
+As the sun began to set, they lay on the shore <br>
+Watching the stars come out, wanting the day to be more 
+  </p>
+  <p>
+    But eventually, they knew they must go <br>
+Back to the stable, their home sweet and low <br>
+But their memories of the beach, they would always keep <br>
+A special holiday together, forever to sleep. 
+  </p>
+  
+
+  <script>
+
+  // Fade in and out periodically
+  setInterval(function() {
+    var poem = document.querySelectorAll('p');
+    for (var i = 0; i < poem.length; i++) {
+      poem[i].classList.toggle('fade');
+    }
+  }, 1000);
+</script>
+
+  </script>
+</body>
+</html>
+
