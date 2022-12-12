@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Martinas Adventskalendar</title>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+        .calendar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .day {
+            width: 80px;
+            height: 80px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-align: center;
+            line-height: 80px;
+            margin: 8px;
+            cursor: pointer;
+        }
+        .day:hover {
+            background-color: #eee;
+        }
+        .day.open {
+            background-color: #fff8dc;
+        }
+        .day.today {
+            border: 2px solid red;
+        }
+        h1 {
+  	   text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Martinas Adventskalendar</h1>
+    <div class="calendar">
+        <div class="day" onclick="window.open('1.html')">12</div>
+        <!--<div class="day" onclick="window.open('https://www.google.com')">13</div>
+        <div class="day" onclick="window.open('https://www.google.com')">14</div>
+        <div class="day" onclick="window.open('https://www.google.com')">15</div>-->
+    </div>
+</body>
+</html>
