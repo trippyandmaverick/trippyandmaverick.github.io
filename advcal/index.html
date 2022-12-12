@@ -11,7 +11,7 @@
         .day {
             width: 80px;
             height: 80px;
-            border: 1px solid #ccc;
+            border: 1px solid rgb(90, 90, 90);
             border-radius: 4px;
             text-align: center;
             line-height: 80px;
@@ -25,6 +25,25 @@
             background-color: #fff8dc;
         }
         .day.today {
+            border: 2px solid rgb(0, 52, 223);
+        }
+        .xday {
+            width: 80px;
+            height: 80px;
+            border: 1px solid rgb(221, 221, 221);
+            border-radius: 4px;
+            text-align: center;
+            line-height: 80px;
+            margin: 8px;
+            cursor: pointer;
+        }
+        .xday:hover {
+            background-color: #eee;
+        }
+        .xday.open {
+            background-color: #fff8dc;
+        }
+        .xday.today {
             border: 2px solid red;
         }
         h1 {
@@ -36,8 +55,23 @@
     <div class="container-sm">
     <h1>Martinas Adventskalendar</h1>
     <div class="calendar">
+        <div class="xday" onclick="">14</div>
+        <div class="xday" onclick="">23</div>
         <div class="day" onclick="window.open('1.html')">11</div>
-        <div class="day" onclick="window.open('2.html')">12</div>
+        <div class="xday" onclick="">21</div>
+        <div class="xday" onclick="">22</div>
+        <div class="xday" onclick="">16</div>
+        <div class="xday" onclick="">19</div>
+        <div class="xday" onclick="">20</div>
+        <div class="xday" onclick="">15</div>
+        <div class="xday" onclick="">25</div>
+        <div class="day today" onclick="window.open('2.html')">12</div>
+        <div class="xday" onclick="">26</div>
+        <div class="xday" onclick="">17</div>
+        <div class="xday" onclick="">13</div>
+        <div class="xday" onclick="">24</div>
+        <div class="xday" onclick="">18</div>
+
     </div>
 </div>
 </body>
