@@ -3,6 +3,10 @@
     <title>Martinas Adventskalendar</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <style>
+        body {
+            background-color: black;
+            color:white
+        }
         .calendar {
             display: flex;
             flex-wrap: wrap;
@@ -18,6 +22,7 @@
             margin: 8px;
             cursor: pointer;
             background-color: #eee;
+            color: black
         }
         .day:hover {
             background-color: rgb(212, 212, 212);
@@ -62,7 +67,7 @@
     <div class="container-sm">
     <h1>Martinas Adventskalendar</h1>
     <div class="calendar">
-        <div class="xday" onclick="">14</div>
+        <div class="day today" onclick="window.open('4.html')">14</div>
         <div class="xday" onclick="">23</div>
         <div class="day" onclick="window.open('1.html')">11</div>
         <div class="xday" onclick="">21</div>
@@ -75,7 +80,7 @@
         <div class="day" onclick="window.open('2.html')">12</div>
         <!--<div class="xday" onclick="">26</div>-->
         <div class="xday" onclick="">17</div>
-        <div class="day today" onclick="window.open('3.html')">13</div>
+        <div class="day" onclick="window.open('3.html')">13</div>
         <div class="xday" onclick="">24</div>
         <div class="xday" onclick="">18</div>
 
