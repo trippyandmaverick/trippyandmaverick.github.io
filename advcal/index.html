@@ -12,6 +12,7 @@
             flex-wrap: wrap;
             justify-content: center;
         }
+
         .day {
             width: 80px;
             height: 80px;
@@ -24,6 +25,13 @@
             background-color: #eee;
             color: black
         }
+        .day:hover {
+            background-color: rgb(212, 212, 212);
+        }
+        .day.open {
+            background-color: #fff8dc;
+        }
+
         .secret {
             width: 80px;
             height: 80px;
@@ -44,12 +52,6 @@
 
         }
 
-        .day:hover {
-            background-color: rgb(212, 212, 212);
-        }
-        .day.open {
-            background-color: #fff8dc;
-        }
         .day.today:hover {
             background-color: rgb(188, 197, 228);
         }
@@ -57,6 +59,25 @@
         .day.today {
             border: 2px solid rgb(0, 52, 223);
             background-color: rgb(224, 231, 255);
+        }
+
+        .day.visited {
+            width: 80px;
+            height: 80px;
+            border: 1px solid rgb(90, 90, 90);
+            border-radius: 4px;
+            text-align: center;
+            line-height: 80px;
+            margin: 8px;
+            cursor: pointer;
+            background-color: #eee;
+            color: black
+        }
+        .day.visited:hover {
+            background-color: rgb(212, 212, 212);
+        }
+        .day.visited.open {
+            background-color: #fff8dc;
         }
 
         .xday {
@@ -83,27 +104,51 @@
   	   text-align: center;
         }
     </style>
+
+    <script>
+        function markVisited(element, id) {
+            document.cookie = "visited="+ document.cookie + "|" +id;
+            element.classList.add("visited");
+        }
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) {
+                return parts.pop().split(";").shift();
+            }
+        }
+
+        window.onload = function() {
+            const visitedIds = getCookie("visitedIds").split(",");
+            for (let i = 0; i < visitedIds.length; i++) {
+                const element = document.getElementById(visitedIds[i]);
+                // Do something with the element, such as adding a class or setting a style
+                element.classList.add("visited");
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container-sm">
     <h1>Martinas Adventskalendar</h1>
     <div class="calendar">
         <div class="day" onclick="window.open('4.html')">14</div>
-        <div class="xday" onclick="">23</div>
+        <div class="xday" onclick="window.open('13.html')">23</div>
         <div class="day" onclick="window.open('1.html')">11</div>
-        <div class="xday" onclick="">21</div>
-        <div class="xday" onclick="">22</div>
+        <div class="day today" onclick="window.open('11.html')">21</div>
+        <div class="day today" onclick="window.open('12b.html')">22</div>
         <div class="day" onclick="window.open('6.html')">16</div>
-        <div class="day today" onclick="window.open('9.html')">19</div>
-        <div class="day today" onclick="window.open('10.html')">20</div>
+        <div class="day" id=9 onclick="window.open('9.html')">19</div>
+        <div class="day" id=10 onclick="window.open('10.html')">20</div>
         <div class="day" onclick="window.open('5.html')">15</div>
         <!--<div class="xday" onclick="">25</div>-->
         <div class="day" onclick="window.open('2.html')">12</div>
         <!--<div class="xday" onclick="">26</div>-->
-        <div class="day today" onclick="window.open('7.html')">17</div>
+        <div class="day" id="7" onclick="window.open('7.html')">17</div>
         <div class="day" onclick="window.open('3.html')">13</div>
-        <div class="xday" onclick="">24</div>
-        <div class="day today" onclick="window.open('8.html')">18</div>
+        <div class="xday" onclick="window.open('14.html')">24</div>
+        <div class="day" id=8 onclick="window.open('8.html')">18</div>
         <div class="secret" onclick="window.open('secret.html')">secret door</div>
 
 
